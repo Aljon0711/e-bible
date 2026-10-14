@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlfoy7vsqrbqw"]
+
+[ext_resource type="Script" uid="uid://c6f4duidla3bv" path="res://fruit_1.gd" id="1_bqhrp"]
+[ext_resource type="Texture2D" uid="uid://c3g3ypbyg5vif" path="res://Tileset 2/spr_tileset_sunnysideworld_16px.png" id="1_u8v0s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bqhrp"]
+radius = 14.142136
+
+[node name="Fruit1" type="Area2D"]
+script = ExtResource("1_bqhrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(53.999996, 52.999996)
+scale = Vector2(-0.9963455, 1)
+texture = ExtResource("1_u8v0s")
+region_enabled = true
+region_rect = Rect2(894.82776, 157.92584, 18.66034, 20.059814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(52, 55)
+shape = SubResource("CircleShape2D_bqhrp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,22 @@
+join Noah (NoahSmile) center [animation="Fade In"]
+Noah: "Thank you for helping me child"
+leave Noah [animation="Fade Out"]
+join Player center [animation="Fade In"]
+Player (player_gulat): no problem it was no... uhmm
+leave Player [animation="Fade Out"]
+join Villager center [animation="Fade In"]
+Villager: “Hey! Why are you chopping down so many trees? What are you planning to do with all that\
+wood?”
+leave Villager [animation="Fade Out"]
+join Noah (FaceNiNoah) center [animation="Fade In"]
+Noah: “God has instructed me to build a great ark — a huge boat. He is going to send a flood to\
+cleanse the earth of all its sins. You must repent and change your ways because God is not\
+pleased with how people live. If you join me in the ark, you will be saved.”
+leave Noah [animation="Fade Out"]
+join Villager2 center [animation="Fade In"]
+Villager2: “A flood? An ark? That’s madness! You’ve lost your mind, Noah. Why should we believe\
+such nonsense? You’re wasting your time!”
+leave Villager2 [animation="Fade Out"]
+join Noah (FaceNiNoah) center [animation="Fade In"]
+“This is not nonsense. I am warning you because I care. The time to change is now.”
+leave Noah [animation="Fade Out"]

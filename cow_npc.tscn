@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://ycijr385i27e"]
+
+[ext_resource type="Texture2D" uid="uid://f3go4elp4vo4" path="res://Animals/spr_deco_cow_strip4.png" id="1_h0v66"]
+[ext_resource type="Script" uid="uid://byajdemdtjbls" path="res://cow_npc.gd" id="1_umpiv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txl6x"]
+atlas = ExtResource("1_h0v66")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kawqw"]
+atlas = ExtResource("1_h0v66")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umpiv"]
+atlas = ExtResource("1_h0v66")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75523"]
+atlas = ExtResource("1_h0v66")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2ml3"]
+atlas = ExtResource("1_h0v66")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kawqw"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txl6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kawqw")
+}],
+"loop": true,
+"name": &"eating",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umpiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75523")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2ml3")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kcupt"]
+radius = 11.045361
+
+[node name="CowNpc" type="CharacterBody2D"]
+script = ExtResource("1_umpiv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(29, 58)
+sprite_frames = SubResource("SpriteFrames_kawqw")
+animation = &"eating"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(30, 56)
+shape = SubResource("CircleShape2D_kcupt")
+
+[node name="walkingtimer" type="Timer" parent="."]
+autostart = true
+
+[node name="changestatetimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="walkingtimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="changestatetimer" to="." method="_on_timer_2_timeout"]

@@ -1,0 +1,67 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.5598959, 0.52761346, 0.40096712, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "FaceNiNoah",
+&"description": "",
+&"display_name": "Noah",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Building": {
+"export_overrides": {
+"image": "\"res://Portraits/building.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"FaceNiNoah": {
+"export_overrides": {
+"image": "\"res://Portraits/pic ni noah.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"GETTOTHEBOAT": {
+"export_overrides": {
+"image": "\"res://Portraits/Theboat.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"NoahSmile": {
+"export_overrides": {
+"image": "\"res://Portraits/noah_smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"hapi": {
+"export_overrides": {
+"image": "\"res://Portraits/noahhapi.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

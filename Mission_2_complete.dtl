@@ -1,0 +1,6 @@
+join Player (Player_face) center
+Player: Here you go noah
+leave Player [animation="Fade Out"]
+join Noah (NoahSmile) center
+Noah: Thank you my child
+leave Noah [animation="Fade Out"]

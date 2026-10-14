@@ -1,0 +1,29 @@
+join God center [animation="Fade In" length="0.4"]
+God: “Noah, the world is full of violence and sin. The people have turned away from me and live\
+wickedly. Because of this, I will send a great flood to destroy all life on the earth.”
+leave God [animation="Fade Out"]
+join Noah center [animation="Fade In"]
+Noah: “But Lord, these are your people.”
+leave Noah [animation="Fade Out"]
+join God center [animation="Fade In"]
+God: “They have chosen evil and forgotten my ways. It will rain for forty days and forty nights, and the\
+waters will cover the earth. But you and your family shall be saved.”
+leave God [animation="Fade Out"]
+join Noah center [animation="Fade In"]
+Noah: “I will obey your command and do all that you have asked.”
+leave Noah [animation="Fade Out"]
+join Player center [animation="Fade In"]
+Player: "Is there something wrong"
+leave Player [animation="Fade Out"]
+join Noah center [animation="Fade In"]
+Noah: "It was God. He told me the world will be destroyed by a great flood because people have turned away from Him. He has commanded me to build this ark to save us and the animals."
+join Noah center [animation="Fade In"]
+join Noah center [animation="Fade In"]
+Noah: "my child, will you help me?"
+leave Noah [animation="Fade Out"]
+join Player center [animation="Fade In"]
+Player: "Sure"
+leave Player [animation="Fade Out"]
+join Noah center [animation="Fade In"]
+Noah: "Okay help me collect 10 woods
+leave Noah [animation="Fade Out"]

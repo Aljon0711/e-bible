@@ -1,0 +1,12 @@
+join Noah (FaceNiNoah) center [animation="Fade In"]
+Noah: Good we're all set up everything is finished!......What was that?
+leave Noah [animation="Fade Out"]
+join Wave center [animation="Fade In"]
+Wave: ...
+leave Wave [animation="Fade Out"]
+join Noah (GETTOTHEBOAT) center [animation="Fade In"]
+GET IN THE ARC! NOW
+leave Noah [animation="Fade Out"]
+join Villager2 (PASOKK) center [animation="Fade In"]
+Villager2: RUNNNN
+leave Villager2 [animation="Fade Out"]

@@ -1,0 +1,213 @@
+[gd_scene load_steps=32 format=3 uid="uid://dm7pqm3w8quan"]
+
+[ext_resource type="Texture2D" uid="uid://dd6bwr8wcay5u" path="res://npc/eve-idle.png" id="1_6ovjn"]
+[ext_resource type="Script" uid="uid://ci2jpgvv6am4b" path="res://scripts/npc_eve.gd" id="1_l45gm"]
+[ext_resource type="Texture2D" uid="uid://biv2eho8l8wa4" path="res://npc/eve-walk-down.png" id="2_m3ek7"]
+[ext_resource type="Texture2D" uid="uid://dor5ovu8piufm" path="res://npc/eve-walk-east.png" id="3_810kf"]
+[ext_resource type="Texture2D" uid="uid://ci61201m1oqbk" path="res://npc/eve-walk-north.png" id="4_4jwkk"]
+[ext_resource type="Texture2D" uid="uid://buif8wuuryd8x" path="res://npc/eve-walk-west.png" id="5_8tqkq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12xge"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6u55"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbj1g"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0hv8"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4e6w"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7ta0"]
+atlas = ExtResource("2_m3ek7")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3stds"]
+atlas = ExtResource("3_810kf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jltrs"]
+atlas = ExtResource("3_810kf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oh3m"]
+atlas = ExtResource("3_810kf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vpcn"]
+atlas = ExtResource("3_810kf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb1yr"]
+atlas = ExtResource("3_810kf")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo653"]
+atlas = ExtResource("3_810kf")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oong3"]
+atlas = ExtResource("4_4jwkk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmnal"]
+atlas = ExtResource("4_4jwkk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw6x2"]
+atlas = ExtResource("4_4jwkk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp05y"]
+atlas = ExtResource("4_4jwkk")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buwfh"]
+atlas = ExtResource("5_8tqkq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_162sw"]
+atlas = ExtResource("5_8tqkq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffeei"]
+atlas = ExtResource("5_8tqkq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xs3l"]
+atlas = ExtResource("5_8tqkq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l45gm"]
+atlas = ExtResource("1_6ovjn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdlk4"]
+atlas = ExtResource("1_6ovjn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g60q"]
+atlas = ExtResource("1_6ovjn")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_foeoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12xge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6u55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbj1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0hv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4e6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7ta0")
+}],
+"loop": true,
+"name": &"eve-walk-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3stds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jltrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oh3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vpcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb1yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo653")
+}],
+"loop": true,
+"name": &"eve-walk-east",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oong3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmnal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw6x2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp05y")
+}],
+"loop": true,
+"name": &"eve-walk-north",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buwfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_162sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffeei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xs3l")
+}],
+"loop": true,
+"name": &"eve-walk-west",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l45gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdlk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g60q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3ek7"]
+radius = 3.0
+
+[node name="npc_eve" type="CharacterBody2D"]
+script = ExtResource("1_l45gm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.40150002, 0.348)
+sprite_frames = SubResource("SpriteFrames_foeoj")
+animation = &"eve-walk-down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_m3ek7")

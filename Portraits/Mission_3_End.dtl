@@ -1,0 +1,12 @@
+join Villager2 (iyak) center [animation="Fade In"]
+Villager2: Im so sorry Noah that we did not believe you
+leave Villager2 [animation="Fade Out"]
+join Noah (hapi) center [animation="Fade In"]
+Noah: Dont worry my child, I forgive you.
+leave Noah [animation="Fade Out"]
+join Villager2 (iyak) center [animation="Fade In"]
+Villager2: Are we going to be alright?
+leave Villager2 [animation="Fade Out"]
+join Noah (hapi) center [animation="Fade In"]
+Noah: Yes
+leave Noah [animation="Fade Out"]

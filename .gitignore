@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exported builds (regenerate from Godot; too large for the source repo)
+*.apk
+*.aab
+*.idsig
+*.pck
+*.wasm
+/e-bible.js
+/e-bible.audio.worklet.js
+/e-bible.audio.position.worklet.js
+
+# Editor temp files
+*.tmp

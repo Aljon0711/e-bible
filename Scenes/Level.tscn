@@ -1,0 +1,115 @@
+[gd_scene load_steps=15 format=3 uid="uid://bl17l0ccyno22"]
+
+[ext_resource type="Texture2D" uid="uid://bf6g3esg7twyd" path="res://Image/Create_a_looping_8-bit_pixel-art_animation_of_a_Jerusalem-inspired_landscape_with_bright_green_grass_seed3129604043-ezgif.com-gif-to-sprite-converter.png" id="1_0ba56"]
+[ext_resource type="Script" uid="uid://co5kan0jpdnsg" path="res://Scenes/level.gd" id="1_8rbpu"]
+[ext_resource type="Texture2D" uid="uid://ceivp5vqh4rtx" path="res://Image/green-arrow-black-outline-vector-pixeled-left-side-direction-pointer-retro-back-button-previous-cursor-uiux-interface-pixel-art-377766101-removebg-preview.png" id="3_fuudy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsvp5"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 0, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rbpu"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 470, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuudy"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 940, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xylue"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 1410, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj5wv"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 1880, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ienac"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 2350, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rrr5"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 2820, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or7tv"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 3290, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_133si"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 3760, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esopp"]
+atlas = ExtResource("1_0ba56")
+region = Rect2(0, 4230, 3920, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b10nm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsvp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rbpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuudy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xylue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj5wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ienac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rrr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or7tv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_133si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esopp")
+}],
+"loop": true,
+"name": &"bg",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8rbpu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2874, 324)
+scale = Vector2(1.4657207, 1.3744681)
+sprite_frames = SubResource("SpriteFrames_b10nm")
+animation = &"bg"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 145.0
+offset_bottom = 133.0
+texture_normal = ExtResource("3_fuudy")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_pressed"]

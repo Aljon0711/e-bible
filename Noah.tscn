@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://qbycc4rv3e33"]
+
+[ext_resource type="Texture2D" uid="uid://cmgbfi28tlsf1" path="res://Noah/kaliwas.png" id="1_1iec6"]
+[ext_resource type="Script" uid="uid://6acu2dfbamab" path="res://noah.gd" id="1_l8umi"]
+[ext_resource type="Texture2D" uid="uid://tfsosy7lojg8" path="res://Noah/kanans.png" id="2_l8umi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j42iy"]
+atlas = ExtResource("1_1iec6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfhbl"]
+atlas = ExtResource("1_1iec6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7enq"]
+atlas = ExtResource("1_1iec6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k1x2"]
+atlas = ExtResource("1_1iec6")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vyh1"]
+atlas = ExtResource("2_l8umi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsgvr"]
+atlas = ExtResource("2_l8umi")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3ayb"]
+atlas = ExtResource("2_l8umi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqc23"]
+atlas = ExtResource("2_l8umi")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6y1rn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j42iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfhbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7enq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k1x2")
+}],
+"loop": true,
+"name": &"Stand_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vyh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsgvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3ayb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqc23")
+}],
+"loop": true,
+"name": &"Stand_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eii00"]
+radius = 7.071068
+
+[node name="Noah" type="CharacterBody2D"]
+script = ExtResource("1_l8umi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(207, 73)
+sprite_frames = SubResource("SpriteFrames_6y1rn")
+animation = &"Stand_right"
+autoplay = "Stand_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(207, 82)
+shape = SubResource("CircleShape2D_eii00")

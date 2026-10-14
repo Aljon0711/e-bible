@@ -1,0 +1,288 @@
+[gd_scene load_steps=26 format=3 uid="uid://b0ah3t4xnjexq"]
+
+[ext_resource type="Script" uid="uid://c68ldq5v17k00" path="res://Scenes/1_st_scene.gd" id="1_n365q"]
+[ext_resource type="Texture2D" uid="uid://bf6g3esg7twyd" path="res://Image/Create_a_looping_8-bit_pixel-art_animation_of_a_Jerusalem-inspired_landscape_with_bright_green_grass_seed3129604043-ezgif.com-gif-to-sprite-converter.png" id="2_xcwe7"]
+[ext_resource type="FontFile" uid="uid://c4snmx3lvenn4" path="res://GrapeSoda.ttf" id="3_csujr"]
+[ext_resource type="Texture2D" uid="uid://ceivp5vqh4rtx" path="res://Image/green-arrow-black-outline-vector-pixeled-left-side-direction-pointer-retro-back-button-previous-cursor-uiux-interface-pixel-art-377766101-removebg-preview.png" id="4_45i5t"]
+[ext_resource type="AudioStream" uid="uid://cnhbawrydrvtp" path="res://Sounds/button-124476.mp3" id="5_fxpf3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj7q8"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 0, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3f5d"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 470, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kto55"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 940, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5psau"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 1410, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puxtr"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 1880, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skyvc"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 2350, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_411v1"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 2820, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vclc4"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 3290, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6kl6"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 3760, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hpka"]
+atlas = ExtResource("2_xcwe7")
+region = Rect2(0, 4230, 3920, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dppb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj7q8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3f5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kto55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5psau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puxtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skyvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_411v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vclc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6kl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hpka")
+}],
+"loop": true,
+"name": &"bg",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n365q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcwe7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csujr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45i5t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fxpf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgdiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_axi4l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b0lpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dv83r"]
+
+[node name="1StScene" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n365q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2882, 323.67383)
+scale = Vector2(1.4689018, 1.3758558)
+sprite_frames = SubResource("SpriteFrames_dppb1")
+animation = &"bg"
+autoplay = "bg"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_top = 0.102000006
+anchor_right = 0.50100005
+anchor_bottom = 0.102000006
+offset_left = -237.15204
+offset_top = -59.096
+offset_right = 237.84796
+offset_bottom = 58.904
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_csujr")
+theme_override_font_sizes/font_size = 110
+text = "Stories"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -41.0
+offset_right = 138.0
+offset_bottom = 131.43196
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_45i5t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fxpf3")
+
+[node name="lvl1_completed" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 258.0
+offset_right = 357.0
+offset_bottom = 384.0
+color = Color(0, 0.6559917, 0.1440193, 1)
+
+[node name="Label" type="Label" parent="lvl1_completed"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -57.0
+offset_right = 59.5
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_csujr")
+theme_override_font_sizes/font_size = 35
+text = "Adam and 
+Eve Story"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="lvl1_completed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n365q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xcwe7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_csujr")
+
+[node name="lvl2_completed" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 258.0
+offset_right = 665.0
+offset_bottom = 384.0
+color = Color(0, 0.654902, 0.14509805, 1)
+
+[node name="Label" type="Label" parent="lvl2_completed"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -37.5
+offset_right = 76.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_csujr")
+theme_override_font_sizes/font_size = 35
+text = "Noah's Ark
+Story"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="lvl2_completed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_45i5t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fxpf3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgdiv")
+
+[node name="lvl3_completed" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 258.0
+offset_right = 961.0
+offset_bottom = 384.0
+color = Color(0, 0.654902, 0.14509805, 1)
+
+[node name="Label" type="Label" parent="lvl3_completed"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_csujr")
+theme_override_font_sizes/font_size = 35
+text = "David and
+Goliath 
+Story"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="lvl3_completed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_axi4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b0lpr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dv83r")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="lvl1_completed/Button" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="lvl2_completed/Button" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="lvl3_completed/Button" to="." method="_on_level_3_pressed"]

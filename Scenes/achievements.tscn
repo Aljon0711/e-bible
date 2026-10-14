@@ -1,0 +1,408 @@
+[gd_scene load_steps=21 format=3 uid="uid://d3go7i7trbhq6"]
+
+[ext_resource type="Script" uid="uid://noavvxu6rmam" path="res://Scenes/achievements.gd" id="1_3m5au"]
+[ext_resource type="Texture2D" uid="uid://bf6g3esg7twyd" path="res://Image/Create_a_looping_8-bit_pixel-art_animation_of_a_Jerusalem-inspired_landscape_with_bright_green_grass_seed3129604043-ezgif.com-gif-to-sprite-converter.png" id="1_7xtne"]
+[ext_resource type="Texture2D" uid="uid://ceivp5vqh4rtx" path="res://Image/green-arrow-black-outline-vector-pixeled-left-side-direction-pointer-retro-back-button-previous-cursor-uiux-interface-pixel-art-377766101-removebg-preview.png" id="3_uik63"]
+[ext_resource type="Texture2D" uid="uid://djvoy1ve4sn2v" path="res://Image/download-removebg-preview (2).png" id="4_38hx6"]
+[ext_resource type="FontFile" uid="uid://c4snmx3lvenn4" path="res://GrapeSoda.ttf" id="5_t4rvt"]
+[ext_resource type="Shader" uid="uid://bhgucaa0cdmg1" path="res://Scenes/achievements.gdshader" id="6_ypges"]
+[ext_resource type="Texture2D" uid="uid://61kuj15vhpsy" path="res://Image/lock-removebg-preview.png" id="7_mbeki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frbbq"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 0, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m5au"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 470, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uik63"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 940, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g04om"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 1410, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcp42"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 1880, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38hx6"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 2350, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4rvt"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 2820, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypges"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 3290, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbeki"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 3760, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qajii"]
+atlas = ExtResource("1_7xtne")
+region = Rect2(0, 4230, 3920, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ncvy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frbbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m5au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uik63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g04om")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcp42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38hx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4rvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypges")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbeki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qajii")
+}],
+"loop": true,
+"name": &"bg",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qajii"]
+bg_color = Color(3.3691526e-06, 0.7221888, 0.2891039, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ncvy"]
+shader = ExtResource("6_ypges")
+
+[node name="Achievements" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3m5au")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2874, 323)
+scale = Vector2(1.4670919, 1.3702128)
+sprite_frames = SubResource("SpriteFrames_6ncvy")
+animation = &"bg"
+autoplay = "bg"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -40.0
+offset_right = 143.36241
+offset_bottom = 127.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_uik63")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="lvl1_achieve" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 126.0
+offset_right = 411.0
+offset_bottom = 346.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl1_achieve"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl1_achieve"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 127.0
+offset_right = 201.0
+offset_bottom = 176.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation you 
+complete level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl2_achieve" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 126.0
+offset_right = 694.0
+offset_bottom = 346.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl2_achieve"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl2_achieve"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 127.0
+offset_right = 201.0
+offset_bottom = 176.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation you 
+complete level 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl3_achieve" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 759.0
+offset_top = 126.0
+offset_right = 978.0
+offset_bottom = 346.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl3_achieve"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl3_achieve"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 127.0
+offset_right = 201.0
+offset_bottom = 176.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation you 
+complete level 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl1_get_old" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 196.00006
+offset_top = 369.0
+offset_right = 415.00006
+offset_bottom = 589.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl1_get_old"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl1_get_old"]
+layout_mode = 0
+offset_left = 15.020311
+offset_top = 121.414764
+offset_right = 203.02031
+offset_bottom = 170.41476
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation your
+ character gets older"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl2_get_old" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 369.0
+offset_right = 698.0
+offset_bottom = 589.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl2_get_old"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl2_get_old"]
+layout_mode = 0
+offset_left = 13.76867
+offset_top = 125.16985
+offset_right = 201.76868
+offset_bottom = 174.16986
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation your
+ character gets older"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl3_get_old" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 369.0
+offset_right = 984.0
+offset_bottom = 589.0
+scale = Vector2(0.7989143, 0.7989143)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qajii")
+
+[node name="TextureRect" type="TextureRect" parent="lvl3_get_old"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 173.0
+offset_bottom = 139.0
+texture = ExtResource("4_38hx6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl3_get_old"]
+layout_mode = 0
+offset_left = 15.020407
+offset_top = 125.16985
+offset_right = 203.0204
+offset_bottom = 174.16986
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t4rvt")
+theme_override_font_sizes/font_size = 22
+text = "Congratulation you
+finished the story"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl1_not_achieve" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 192.0
+offset_top = 126.0
+offset_right = 370.0
+offset_bottom = 304.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="lvl2_not_achieve" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 475.0
+offset_top = 126.0
+offset_right = 653.0
+offset_bottom = 304.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="lvl3_not_achieve" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 759.0
+offset_top = 126.0
+offset_right = 937.0
+offset_bottom = 304.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="lvl1_not_old" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 194.0
+offset_top = 368.0
+offset_right = 372.0
+offset_bottom = 546.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="lvl2_not_old" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 478.0
+offset_top = 368.0
+offset_right = 656.0
+offset_bottom = 546.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="lvl3_not_old" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ncvy")
+layout_mode = 0
+offset_left = 763.0
+offset_top = 368.0
+offset_right = 941.0
+offset_bottom = 546.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6862745)
+
+[node name="Lock1" type="Sprite2D" parent="."]
+position = Vector2(281, 201)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[node name="Lock2" type="Sprite2D" parent="."]
+position = Vector2(563, 201)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[node name="Lock3" type="Sprite2D" parent="."]
+position = Vector2(848, 201)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[node name="Lock4" type="Sprite2D" parent="."]
+position = Vector2(285, 445)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[node name="Lock5" type="Sprite2D" parent="."]
+position = Vector2(569, 445)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[node name="Lock6" type="Sprite2D" parent="."]
+position = Vector2(855, 445)
+scale = Vector2(0.488, 0.488)
+texture = ExtResource("7_mbeki")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_pressed"]

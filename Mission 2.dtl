@@ -1,0 +1,6 @@
+join Noah (FaceNiNoah) center [animation="Fade In"]
+Noah: Since we got our wood, why dont we start gathering some food? Can you do that?
+leave Noah [animation="Fade Out"]
+join Player (Player_face) center [animation="Fade In"]
+Player: Sure
+leave Noah [animation="Fade Out"]

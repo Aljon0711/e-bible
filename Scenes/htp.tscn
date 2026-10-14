@@ -1,0 +1,173 @@
+[gd_scene load_steps=18 format=3 uid="uid://clesdyudswhym"]
+
+[ext_resource type="Script" uid="uid://cs1k58iaugpea" path="res://Scenes/htp.gd" id="1_j6lnb"]
+[ext_resource type="Texture2D" uid="uid://bf6g3esg7twyd" path="res://Image/Create_a_looping_8-bit_pixel-art_animation_of_a_Jerusalem-inspired_landscape_with_bright_green_grass_seed3129604043-ezgif.com-gif-to-sprite-converter.png" id="2_f18jc"]
+[ext_resource type="Texture2D" uid="uid://ceivp5vqh4rtx" path="res://Image/green-arrow-black-outline-vector-pixeled-left-side-direction-pointer-retro-back-button-previous-cursor-uiux-interface-pixel-art-377766101-removebg-preview.png" id="3_pl6ty"]
+[ext_resource type="AudioStream" uid="uid://cnhbawrydrvtp" path="res://Sounds/button-124476.mp3" id="4_gdt0p"]
+[ext_resource type="FontFile" uid="uid://c4snmx3lvenn4" path="res://GrapeSoda.ttf" id="5_f18jc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqxh0"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 0, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4w1y"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 470, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lk2m"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 940, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agkql"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 1410, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1nyg"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 1880, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_has1n"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 2350, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8qp0"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 2820, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb3c5"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 3290, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbgdn"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 3760, 3920, 470)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eipni"]
+atlas = ExtResource("2_f18jc")
+region = Rect2(0, 4230, 3920, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdff6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqxh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4w1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lk2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agkql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1nyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_has1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8qp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb3c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbgdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eipni")
+}],
+"loop": true,
+"name": &"bg",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl6ty"]
+bg_color = Color(0, 0.44705883, 0.14509805, 0.4392157)
+
+[node name="Htp" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j6lnb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2876, 325.00003)
+scale = Vector2(1.467347, 1.3765956)
+sprite_frames = SubResource("SpriteFrames_jdff6")
+animation = &"bg"
+autoplay = "bg"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -38.0
+offset_right = 136.76598
+offset_bottom = 121.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_pl6ty")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gdt0p")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.5
+offset_top = -254.5
+offset_right = 310.5
+offset_bottom = 254.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl6ty")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.5
+offset_top = 1.5
+offset_right = 5.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_f18jc")
+theme_override_font_sizes/font_size = 20
+text = "Instructions
+
+
+Your mission is to locate the assigned NPC (Non-Playable Character) in the 
+area and interact with them in order to complete your objective. Use the 
+on-screen joystick to move your character around the environment and 
+carefully explore the surroundings until you find the correct NPC.
+
+Once you are close enough to the NPC, an interaction will automatically 
+begin. Simply approach them and make sure you stay within range to start 
+the conversation. Pay close attention to the dialogue and do not skip any 
+part of the story, just click the screen to next the dialogue, 
+as the information provided will help you answer the quiz 
+questions correctly later in the game.
+
+Take your time reading and understanding the conversation so you 
+can successfully complete the mission."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_pressed"]

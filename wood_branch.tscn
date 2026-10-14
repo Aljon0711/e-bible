@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c28frwlih10dq"]
+
+[ext_resource type="Script" uid="uid://bnuk57mifqhem" path="res://wood_branch.gd" id="1_l1vr6"]
+[ext_resource type="Texture2D" uid="uid://byuuhn7rsnfcf" path="res://Tilesets/Solaria Demo Tiles.png" id="2_canec"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4s3f"]
+radius = 9.0
+
+[node name="WoodBranch" type="Area2D"]
+script = ExtResource("1_l1vr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(101, 58)
+texture = ExtResource("2_canec")
+region_enabled = true
+region_rect = Rect2(80.28948, 144.48686, 15.907906, 14.881592)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(101, 58)
+shape = SubResource("CircleShape2D_i4s3f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
